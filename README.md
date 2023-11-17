@@ -1,17 +1,19 @@
-# alpine-terminal-bot
-**Currently Linux only, you can always modify the code to make it work with Windows.
-This bot is mainly made for the Minecraft server kaboom.pw, if you want to use it on a different server or in your own world, please modify it to your needs.**
+# Alpine Terminal Bot
 
-Run Alpine Linux commands using a minecraft-protocol bot that communicates with an Alpine Linux docker image
+**Note: Currently Linux-only; you can modify the code to adapt it for Windows. This bot was initially created for the Minecraft server kaboom.pw. If you intend to use it on a different server or in your own world, feel free to customize it according to your requirements.**
+
+Run Alpine Linux commands through a Minecraft-protocol bot that communicates with an Alpine Linux Docker image.
 
 ## Usage
-- Make sure you have docker installed on your system. (https://docs.docker.com/get-docker)
-- Pull the Alpine Linux docker image by doing `docker pull alpine`. (https://hub.docker.com/_/alpine)
-- Clone the repository using `git clone https://github.com/IuCC123/alpine-terminal-bot`. (be sure to have git installed on your system as well)
-- Install the packages required by doing `npm i` in the directory where the repository has been cloned.
-- Run `node .` and wait until the bot's core has been setup, then do `,rebuild`, after that do `,run <command>` and the bot should reply with the output given.
 
-Feel free to use/modify this bot however you want, you can always help me out by making pull requests, good luck!
-Need help? Be sure to reach out to me on Discord! Discord tag: `iucc.`
+1. Ensure that Docker is installed on your system. If not, you can install it from [here](https://docs.docker.com/get-docker).
+2. Pull the Alpine Linux Docker image with the command: `docker pull alpine`. You can find the image [here](https://hub.docker.com/_/alpine).
+3. Clone the repository using the following command: `git clone https://github.com/IuCC123/alpine-terminal-bot`. Make sure you have Git installed on your system.
+4. Install the required packages by running `npm i` in the cloned repository directory.
+5. Run `node .` and wait for the bot's core setup. Once complete, execute `,rebuild`, followed by `,run <command>`. The bot should respond with the given command's output.
 
-MIT License (free to use for everyone) - Read more here: https://en.wikipedia.org/wiki/MIT_License, https://github.com/IuCC123/alpine-terminal-bot/blob/main/LICENSE
+Feel free to use and modify this bot as needed. Contributions are welcome through pull requests. Good luck!
+
+Need assistance? Reach out to me on Discord! Discord tag: `iucc.`
+
+**MIT License** - This software is free to use for everyone. [Read more](https://en.wikipedia.org/wiki/MIT_License), and refer to the [LICENSE file](https://github.com/IuCC123/alpine-terminal-bot/blob/main/LICENSE) for details.
