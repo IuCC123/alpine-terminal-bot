@@ -7,7 +7,7 @@ Run Alpine Linux commands through a Minecraft-protocol bot that communicates wit
 ## Usage
 
 1. Ensure that Docker is installed on your system. If not, you can install it from [here](https://docs.docker.com/get-docker).
-2. Ensure that Screen is installed on your system. If not, you can view the install guide [here]([https://docs.docker.com/get-docker](https://phoenixnap.com/kb/how-to-use-linux-screen-with-commands)).
+2. Ensure that Screen is installed on your system. If not, you can view the install guide [here](https://phoenixnap.com/kb/how-to-use-linux-screen-with-commands).
 3. Pull the Alpine Linux Docker image with the command: `docker pull alpine`. You can find the image [here](https://hub.docker.com/_/alpine).
 4. Clone the repository using the following command: `git clone https://github.com/IuCC123/alpine-terminal-bot`. Make sure you have Git installed on your system.
 5. Install the required packages by running `npm i` in the cloned repository directory.
