@@ -4,7 +4,7 @@ const vec3 = require("vec3");
 var containerId = null;
 
 const bot = nmp.createClient({
-  host: "mcslot.eu",
+  host: "kaboom.pw",
   port: 25565,
   username: "alpine-test",
   version: false,
@@ -38,7 +38,7 @@ bot.on("state", function (newState) {
       setTimeout(function () {
         bot.command(
           "fill -124222 120 24931 -124202 119 24911 minecraft:command_block replace"
-        );
+        ); //i know hardcoded position deal with it nub
       }, 4000);
     }, 1000);
   }
@@ -58,7 +58,7 @@ bot.on("packet", async (data, meta) => {
   if (meta.name === "player_chat") {
     var msg = new ChatMessage(JSON.parse(data.unsignedChatContent));
     console.log(msg.toAnsi());
-    if (msg.toString().split(": ")[1].startsWith(",rebuild")) {
+    if (msg.toString().split(": ")[1].startsWith(",rebuild")) { //i cba making a proper command handler using files zzzzzzzzzzzzzzzzzzzzzzzz 
       sendMessage("&bRebuilding docker container... This can take a while");
       const { exec } = require("child_process");
       exec("sudo rm -rf /var/lib/docker/containers/*");
