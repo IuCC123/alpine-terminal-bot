@@ -1,5 +1,6 @@
 # alpine-terminal-bot
-**Currently Linux only, you can always modify the code to make it work with Windows.**
+**Currently Linux only, you can always modify the code to make it work with Windows.
+This bot is mainly made for the Minecraft server kaboom.pw, if you want to use it on a different server or in your own world, please modify it to your needs.**
 
 Run Alpine Linux commands using a minecraft-protocol bot that communicates with an Alpine Linux docker image
 
