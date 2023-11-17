@@ -11,4 +11,4 @@ Run Alpine Linux commands using a minecraft-protocol bot that communicates with 
 Feel free to use/modify this bot however you want, you can always help me out by making pull requests, good luck!
 Need help? Be sure to reach out to me on Discord! Discord tag: `iucc.`
 
-MIT License (free to use for everyone) - Read more here: https://en.wikipedia.org/wiki/MIT_License
+MIT License (free to use for everyone) - Read more here: https://en.wikipedia.org/wiki/MIT_License, https://github.com/IuCC123/alpine-terminal-bot/blob/main/LICENSE
