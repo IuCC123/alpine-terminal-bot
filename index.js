@@ -4,7 +4,7 @@ const vec3 = require("vec3");
 var containerId = null;
 
 const bot = nmp.createClient({
-  host: "kaboom.pw",
+  host: "play.kaboom.pw",
   port: 25565,
   username: "alpine-test",
   version: false,
@@ -61,13 +61,15 @@ bot.on("packet", async (data, meta) => {
     if (msg.toString().split(": ")[1].startsWith(",rebuild")) { //i cba making a proper command handler using files zzzzzzzzzzzzzzzzzzzzzzzz 
       sendMessage("&bRebuilding docker container... This can take a while");
       const { exec } = require("child_process");
-      exec("sudo rm -rf /var/lib/docker/containers/*");
+      exec("rm -rf /var/lib/docker/containers/*");
       exec("screen -d -m docker run -ti alpine /bin/ash", (error) => {
         if (error) {
           console.error(`error: ${error.message}`);
           return;
         }
-        exec("docker ps -lq", (stdout) => {
+        exec("docker ps -lq", (err, stdout, stderr) => {
+	  console.log(err,stdout,stderr)
+          if(!stdout) return sendMessage("&cWTF! error!!!!!!!!!!!");
           console.log(stdout);
           containerId = stdout.replaceAll("\n", "");
           sendMessage(
@@ -83,9 +85,6 @@ bot.on("packet", async (data, meta) => {
       const command = (msg.toString().split(",run ")[1] = msg
         .toString()
         .split(",run ")[1]
-        .replaceAll("rm", "")
-        .replaceAll("reboot", "")
-        .replaceAll("halt", "")
         .split(" "));
 
       docker.getContainer(containerId).exec(
@@ -114,11 +113,17 @@ bot.on("packet", async (data, meta) => {
                   console.error(err);
                   return;
                 }
+                console.log(output.toString())
                 output
-                  .toString()
+                  .toString('utf16le')
                   .split("\n")
                   .forEach(function (line) {
-                    runCmd('tellraw @a "§a' + line + '"');
+                    if(!line.length > 0){
+
+                    }else{
+                      runCmd('tellraw @a ' + JSON.stringify("§8> §7"+line.replaceAll('\r', '').replace(/[\x00-\x08\x0E-\x1F\x7F-\uFFFF]/g, '')));
+                    }
+                    
                   });
               });
             });
